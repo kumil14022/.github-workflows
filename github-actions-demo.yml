@@ -1,1 +1,19 @@
+nama: Demo Tindakan GitHub
+run-name: ${{ github.actor }} sedang menguji GitHub Actions 🚀
+pada: [mendorong]
+pekerjaan:
+  Jelajahi-Tindakan-GitHub:
+    berjalan-on: ubuntu-terbaru
+    Langkah:
+      - run: echo "🎉 Pekerjaan secara otomatis dipicu oleh peristiwa ${{ github.event_name }}."
+      - run: echo "🐧 Pekerjaan ini sekarang berjalan di server ${{ runner.os }} yang dihosting oleh GitHub!"
+      - run: echo "🔎 Nama cabang Anda adalah ${{ github.ref }} dan repositori Anda adalah ${{ github.repository }}."
+      - nama: Periksa kode repositori
+        kegunaan: tindakan/checkout@v4
+      - run: echo "💡 Repositori ${{ github.repository }} telah diklon ke runner."
+      - run: echo "🖥️ Alur kerja sekarang siap untuk menguji kode Anda pada runner."
+      - nama: Daftar file dalam repositori
+        jalankan: |
+          ls ${{ github.ruang kerja }}
+      - run: echo "🍏 Status pekerjaan ini adalah ${{ job.status }}."
 
